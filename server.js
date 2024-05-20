@@ -13,6 +13,11 @@ const object = {
         'ability': 'other stuff',
         'cost': 14,
     },
+    'aka':{
+        'age': 30,
+        'ability': 'other other stuff',
+        'cost': 8,
+    },
     'blank':{
         'age': 0,
         'ability': 'blank',
@@ -37,6 +42,6 @@ app.get('/api/:name', (req, res) =>{
         res.json(object['blank'])
     }
 })
-app.listen(PORT, () =>{
+app.listen(process.env.PORT || PORT, () =>{
     console.log(`Running on port ${PORT}`)
 })
